@@ -1,0 +1,16 @@
+{
+  "name": "waleed-amjad-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio with 3D animations and chatbot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,30 @@
+/* Custom styles to complement Tailwind */
+body {
+    overflow-x: hidden;
+}
+
+#bg-canvas {
+    display: block;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Chatbot panel animation */
+#chatbot-panel {
+    transform-origin: bottom right;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#chatbot-panel:not(.hidden) {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#chatbot-panel.hidden {
+    transform: scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+}
