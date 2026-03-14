@@ -3,6 +3,7 @@ body {
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
     background-color: #050510;
+    color: white;
 }
 
 #bg-canvas {
@@ -15,12 +16,48 @@ body {
     display: block;
 }
 
-/* Name styling */
+/* Main content container */
+main {
+    position: relative;
+    z-index: 10;
+}
+
+/* Section backgrounds - semi-transparent with blur for readability */
+section:not(#home) {
+    background: rgba(10, 10, 20, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+/* Hero section (no background to let black hole shine through) */
+#home {
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    min-height: 100vh;
+}
+
+/* Name styling with subtle glow */
 #main-name {
     transition: opacity 0.3s ease;
     letter-spacing: 6px;
     font-weight: 300;
     text-shadow: 0 0 20px rgba(59,130,246,0.5);
+    background: rgba(0,0,0,0.3);
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* RGB text for headings only */
@@ -41,10 +78,13 @@ body {
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     animation: float 6s ease-in-out infinite;
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 .skill-card:hover, .project-card:hover, .group:hover {
     animation: none;
     transform: translateY(-5px);
+    border-color: #3b82f6;
 }
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -79,9 +119,26 @@ body {
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(59,130,246,0.3);
+}
+.contact-btn:hover {
+    background: #3b82f6;
+    border-color: #3b82f6;
 }
 
 /* Section headings */
 h2 i {
     animation: rgbPulse 4s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section:not(#home) {
+        padding: 1rem;
+    }
+    #main-name {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
 }
