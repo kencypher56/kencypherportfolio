@@ -1,30 +1,87 @@
-/* Custom styles to complement Tailwind */
 body {
+    margin: 0;
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    background-color: #050510;
 }
 
 #bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     display: block;
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+/* Name styling */
+#main-name {
+    transition: opacity 0.3s ease;
+    letter-spacing: 6px;
+    font-weight: 300;
+    text-shadow: 0 0 20px rgba(59,130,246,0.5);
 }
 
-/* Chatbot panel animation */
-#chatbot-panel {
-    transform-origin: bottom right;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+/* RGB text for headings only */
+.rgb-text {
+    animation: rgbPulse 4s infinite;
+    text-shadow: 0 0 10px currentColor;
+}
+@keyframes rgbPulse {
+    0% { color: #ff00ff; text-shadow: 0 0 15px #ff00ff; }
+    25% { color: #ffff00; text-shadow: 0 0 15px #ffff00; }
+    50% { color: #00ffff; text-shadow: 0 0 15px #00ffff; }
+    75% { color: #ff0000; text-shadow: 0 0 15px #ff0000; }
+    100% { color: #ff00ff; text-shadow: 0 0 15px #ff00ff; }
 }
 
-#chatbot-panel:not(.hidden) {
-    transform: scale(1);
-    opacity: 1;
+/* Cards with floating animation */
+.skill-card, .project-card, .group {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    animation: float 6s ease-in-out infinite;
+}
+.skill-card:hover, .project-card:hover, .group:hover {
+    animation: none;
+    transform: translateY(-5px);
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
 }
 
-#chatbot-panel.hidden {
-    transform: scale(0.9);
-    opacity: 0;
-    pointer-events: none;
+/* Skill card icon hover */
+.skill-card:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #60a5fa;
+}
+
+/* Buttons */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+/* Section headings */
+h2 i {
+    animation: rgbPulse 4s infinite;
 }

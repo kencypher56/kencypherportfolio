@@ -3,177 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Waleed Amjad | System Administrator & Cybersecurity Professional</title>
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Three.js for 3D animations -->
+    <title>Muhammad Waleed Amjad | 3D Portfolio</title>
+    <!-- Tailwind + Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-900 text-white font-sans antialiased">
+<body class="bg-black text-white font-sans antialiased overflow-x-hidden">
 
-    <!-- 3D Canvas Background -->
+    <!-- 3D Canvas -->
     <canvas id="bg-canvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
 
     <!-- Main Content -->
-    <main class="relative z-10 container mx-auto px-4 py-8">
+    <main class="relative z-10 container mx-auto px-4 py-8 max-w-5xl">
         <!-- Hero Section -->
         <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">Muhammad Waleed Amjad</h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8">System Administrator | IT Manager | Cybersecurity Professional</p>
-            <a href="#about" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Explore My Work</a>
+            <h1 id="main-name" class="text-5xl md:text-7xl font-light tracking-widest mb-2 text-white" style="text-shadow: 0 0 20px rgba(59,130,246,0.3);">MUHAMMAD WALEED AMJAD</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                <i class="fas fa-shield-alt mr-2 text-blue-400"></i>System Administrator · IT Manager · Cybersecurity Professional
+            </p>
+            <a href="#about" class="group relative px-6 py-3 rounded-full bg-transparent border-2 border-blue-500 text-blue-400 font-bold hover:bg-blue-500 hover:text-white transition-all duration-300 hover:shadow-[0_0_30px_#3b82f6]">
+                <span class="relative z-10">Explore My Work</span>
+                <span class="absolute inset-0 rounded-full bg-blue-500 opacity-0 group-hover:opacity-20 blur-xl transition"></span>
+            </a>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20">
-            <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
-            <div class="max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed">
-                <p>Results-driven System Administrator and IT Manager with over 6 years of experience in infrastructure management, cybersecurity, and full-stack DevOps implementation. Proven track record in designing high-availability VPN protocols, self-hosting enterprise alternatives, and leading ERP implementations for manufacturing. Expertise spans cloud architecture (GCP, DO, Contabo), automation (Python/Bash), and security hardening (Wazuh, Imunify360). Adept at bridging technical operations and business requirements.</p>
+        <section id="about" class="py-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center rgb-text"><i class="fas fa-user-astronaut mr-3"></i>About Me</h2>
+            <div class="bg-gray-900 bg-opacity-40 p-6 rounded-2xl backdrop-blur-md border border-gray-700 hover:border-blue-500 transition-all duration-500 hover:shadow-[0_0_30px_#3b82f6] hover:-translate-y-1">
+                <p class="text-gray-200 text-lg leading-relaxed">Results-driven System Administrator and IT Manager with 6+ years in infrastructure, cybersecurity, and DevOps. Expert in high-availability VPNs, self-hosted enterprise tools, and ERP implementation for manufacturing. Skilled in cloud (GCP, DO, Contabo), automation (Python/Bash), and security hardening (Wazuh, Imunify360).</p>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="py-20">
-            <h2 class="text-4xl font-bold mb-12 text-center">Professional Experience</h2>
-            <div class="space-y-12 max-w-4xl mx-auto">
+        <!-- Experience (reordered) -->
+        <section id="experience" class="py-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center rgb-text"><i class="fas fa-briefcase mr-3"></i>Professional Experience</h2>
+            <div class="space-y-6">
+                <!-- Unika -->
+                <div class="group bg-gray-900 bg-opacity-40 p-6 rounded-2xl backdrop-blur-md border border-gray-700 hover:border-green-500 transition-all duration-500 hover:shadow-[0_0_30px_#10b981] hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-chart-line text-green-400 text-2xl mr-3 group-hover:scale-110 transition"></i>
+                        <h3 class="text-xl font-semibold">IT Manager - ERP Implementation</h3>
+                    </div>
+                    <p class="text-green-400 mb-3">Unika Industries PVT LTD | June 2025 – Present</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Led full-scale ERP implementation (Accounts, Store, Production, Sales).</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Bridged factory operations and dev team; translated workflows.</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Managed PostgreSQL/Kong DB; generated C-level reports.</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Streamlined Purchase Order-to-GRN cycle, reducing errors.</li>
+                    </ul>
+                </div>
                 <!-- Docdax -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-blue-500">
-                    <h3 class="text-2xl font-semibold">System Administrator (Remote)</h3>
-                    <p class="text-blue-400 mb-2">Docdax PVT LTD | July 2024 – March 2026</p>
-                    <ul class="list-disc list-inside text-gray-300 space-y-1">
-                        <li>Architected secure VPN infrastructure (WireGuard, OpenVPN, Outline, Xray/V2Ray) ensuring zero-downtime connectivity.</li>
-                        <li>Deployed self-hosted Mattermost and Mailcow; automated server monitoring with Python/Bash scripts.</li>
-                        <li>Engineered CI/CD pipelines using Drone CI, Gitea, Jenkins; managed Docker containers.</li>
-                        <li>Implemented monitoring with Zabbix, Grafana, and Wazuh EDR across cloud VPS (Contabo, DO, GCP).</li>
-                        <li>Provisioned GPU instances on RunPod for AI models (Flux, Stable Diffusion).</li>
+                <div class="group bg-gray-900 bg-opacity-40 p-6 rounded-2xl backdrop-blur-md border border-gray-700 hover:border-blue-500 transition-all duration-500 hover:shadow-[0_0_30px_#3b82f6] hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-laptop-code text-blue-400 text-2xl mr-3 group-hover:scale-110 transition"></i>
+                        <h3 class="text-xl font-semibold">System Administrator (Remote)</h3>
+                    </div>
+                    <p class="text-blue-400 mb-3">Docdax PVT LTD | July 2024 – March 2026</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Architected secure VPN infrastructure (WireGuard, OpenVPN, Outline, Xray/V2Ray).</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Deployed Mattermost, Mailcow; automated monitoring with Python/Bash.</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Engineered CI/CD pipelines (Drone CI, Gitea, Jenkins); Docker management.</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Implemented Zabbix, Grafana, Wazuh EDR across cloud VPS.</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Provisioned GPU instances for AI models (Flux, Stable Diffusion).</li>
                     </ul>
                 </div>
-                <!-- Unika Industries -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-green-500">
-                    <h3 class="text-2xl font-semibold">IT Manager - ERP Implementation</h3>
-                    <p class="text-green-400 mb-2">Unika Industries PVT LTD | June 2025 – Present</p>
-                    <ul class="list-disc list-inside text-gray-300 space-y-1">
-                        <li>Led full-scale ERP implementation for food manufacturing: Accounts, Store, Production, Sales modules.</li>
-                        <li>Acted as bridge between factory operators and dev team, translating workflows into technical specs.</li>
-                        <li>Assisted PostgreSQL/Kong DB management; generated audit reports for C-level decisions.</li>
-                        <li>Streamlined Purchase Order-to-GRN cycle, reducing manual errors and improving inventory accuracy.</li>
-                    </ul>
-                </div>
-                <!-- PNY Trainings -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow-lg border-l-4 border-purple-500">
-                    <h3 class="text-2xl font-semibold">Cyber Security Instructor</h3>
-                    <p class="text-purple-400 mb-2">PNY Trainings, Multan | Dec 2023 – June 2025</p>
-                    <ul class="list-disc list-inside text-gray-300 space-y-1">
-                        <li>Instructed Ethical Hacking, Penetration Testing, and Defensive Security.</li>
-                        <li>Designed real-world lab environments for exploitation and defense practice.</li>
-                        <li>Mentored students through CTF challenges and certification prep.</li>
+                <!-- PNY -->
+                <div class="group bg-gray-900 bg-opacity-40 p-6 rounded-2xl backdrop-blur-md border border-gray-700 hover:border-purple-500 transition-all duration-500 hover:shadow-[0_0_30px_#a855f7] hover:-translate-y-1">
+                    <div class="flex items-center mb-3">
+                        <i class="fas fa-chalkboard-teacher text-purple-400 text-2xl mr-3 group-hover:scale-110 transition"></i>
+                        <h3 class="text-xl font-semibold">Cyber Security Instructor</h3>
+                    </div>
+                    <p class="text-purple-400 mb-3">PNY Trainings, Multan | Dec 2023 – June 2025</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Instructed Ethical Hacking, Penetration Testing, Defensive Security.</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Designed real-world lab environments for exploitation and defense.</li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i>Mentored students through CTF challenges and certification prep.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-20">
-            <h2 class="text-4xl font-bold mb-12 text-center">Technical Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold text-blue-400 mb-2">Cloud & DevOps</h3>
-                    <p class="text-gray-300">Docker, Kubernetes, Drone CI, Jenkins, GitLab, Gitea, N8N, Proxmox</p>
+        <!-- Skills (categorized) -->
+        <section id="skills" class="py-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center rgb-text"><i class="fas fa-cogs mr-3"></i>Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cloud & DevOps -->
+                <div class="skill-card bg-gray-900 bg-opacity-40 p-5 rounded-xl backdrop-blur-md border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:shadow-[0_0_20px_#3b82f6] hover:-translate-y-1">
+                    <i class="fab fa-docker text-3xl text-blue-400 mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Cloud & DevOps</h3>
+                    <p class="text-sm text-gray-300">Docker, Kubernetes, Drone CI, Jenkins, GitLab, Gitea, N8N, Proxmox</p>
                 </div>
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold text-green-400 mb-2">Operating Systems</h3>
-                    <p class="text-gray-300">Linux (all major distros, hardening), Windows Server (Kerberos, Group Policies, RDP, IIS/Apache)</p>
+                <!-- Operating Systems -->
+                <div class="skill-card bg-gray-900 bg-opacity-40 p-5 rounded-xl backdrop-blur-md border border-gray-700 hover:border-green-400 transition-all duration-300 hover:shadow-[0_0_20px_#10b981] hover:-translate-y-1">
+                    <i class="fab fa-linux text-3xl text-green-400 mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Operating Systems</h3>
+                    <p class="text-sm text-gray-300">Linux (all distros), Windows Server (Kerberos, Group Policies, RDP, IIS/Apache)</p>
                 </div>
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold text-purple-400 mb-2">Networking & Security</h3>
-                    <p class="text-gray-300">WireGuard, OpenVPN, Xray/V2Ray, Wazuh EDR, Imunify360, Firewall, SSH Hardening, Web Pen Testing</p>
+                <!-- Networking & Security -->
+                <div class="skill-card bg-gray-900 bg-opacity-40 p-5 rounded-xl backdrop-blur-md border border-gray-700 hover:border-purple-400 transition-all duration-300 hover:shadow-[0_0_20px_#a855f7] hover:-translate-y-1">
+                    <i class="fas fa-network-wired text-3xl text-purple-400 mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Networking & Security</h3>
+                    <p class="text-sm text-gray-300">WireGuard, OpenVPN, Xray/V2Ray, Wazuh EDR, Imunify360, Firewall, SSH Hardening, Web Pen Testing</p>
                 </div>
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold text-yellow-400 mb-2">Web Servers & Domains</h3>
-                    <p class="text-gray-300">Caddy, Nginx, Apache, Cloudflare, Plesk</p>
+                <!-- Web Servers & Domains -->
+                <div class="skill-card bg-gray-900 bg-opacity-40 p-5 rounded-xl backdrop-blur-md border border-gray-700 hover:border-yellow-400 transition-all duration-300 hover:shadow-[0_0_20px_#eab308] hover:-translate-y-1">
+                    <i class="fas fa-globe text-3xl text-yellow-400 mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Web Servers & Domains</h3>
+                    <p class="text-sm text-gray-300">Caddy, Nginx, Apache, Cloudflare, Plesk</p>
                 </div>
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold text-red-400 mb-2">Programming & Databases</h3>
-                    <p class="text-gray-300">Python, Bash, PostgreSQL, Kong DB</p>
+                <!-- Programming & Databases -->
+                <div class="skill-card bg-gray-900 bg-opacity-40 p-5 rounded-xl backdrop-blur-md border border-gray-700 hover:border-red-400 transition-all duration-300 hover:shadow-[0_0_20px_#ef4444] hover:-translate-y-1">
+                    <i class="fab fa-python text-3xl text-red-400 mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Programming & Databases</h3>
+                    <p class="text-sm text-gray-300">Python, Bash, PostgreSQL, Kong DB</p>
                 </div>
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold text-indigo-400 mb-2">Monitoring & Tools</h3>
-                    <p class="text-gray-300">Zabbix, Grafana, Comfy UI, AI Model Deployment (Flux, Stable Diffusion)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <h2 class="text-4xl font-bold mb-12 text-center">Key Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="h-48 bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
-                        <span class="text-4xl">🎯</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">CTF "ShootTheSun"</h3>
-                        <p class="text-gray-400 mb-4">Designed and published a Capture The Flag room on TryHackMe for international competition, testing real-world exploitation and hardening.</p>
-                        <a href="https://tryhackme.com/jr/shootthesun" target="_blank" class="text-blue-400 hover:underline">View Room →</a>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="h-48 bg-gradient-to-r from-green-600 to-teal-600 flex items-center justify-center">
-                        <span class="text-4xl">📊</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Centralized Server Monitoring</h3>
-                        <p class="text-gray-400 mb-4">Custom Python agent collecting metrics (CPU, RAM, Disk) from distributed servers into a real-time web dashboard.</p>
-                    </div>
-                </div>
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
-                    <div class="h-48 bg-gradient-to-r from-orange-600 to-red-600 flex items-center justify-center">
-                        <span class="text-4xl">☁️</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Self-Hosted "Google Drive"</h3>
-                        <p class="text-gray-400 mb-4">Architected private cloud storage using open-source protocols, providing secure on-premise alternative.</p>
-                    </div>
+                <!-- Monitoring & Tools -->
+                <div class="skill-card bg-gray-900 bg-opacity-40 p-5 rounded-xl backdrop-blur-md border border-gray-700 hover:border-indigo-400 transition-all duration-300 hover:shadow-[0_0_20px_#818cf8] hover:-translate-y-1">
+                    <i class="fas fa-chart-bar text-3xl text-indigo-400 mb-3"></i>
+                    <h3 class="text-lg font-semibold mb-2">Monitoring & Tools</h3>
+                    <p class="text-sm text-gray-300">Zabbix, Grafana, Comfy UI, AI Model Deployment (Flux, Stable Diffusion)</p>
                 </div>
             </div>
         </section>
 
-        <!-- Education & Contact -->
-        <section id="contact" class="py-20">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold mb-8">Education</h2>
-                <p class="text-2xl text-gray-300 mb-12">BS in Information Technology</p>
-                <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-lg">
-                    <a href="mailto:kencypher56@gmail.com" class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-full transition">📧 kencypher56@gmail.com</a>
-                    <a href="https://linkedin.com/in/waleed-amjad-069520217" target="_blank" class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-full transition">🔗 LinkedIn</a>
-                    <a href="tel:+923090326526" class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-full transition">📞 +92 309 0326526</a>
+        <!-- Projects -->
+        <section id="projects" class="py-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center rgb-text"><i class="fas fa-code-branch mr-3"></i>Key Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="project-card bg-gray-900 bg-opacity-40 p-6 rounded-2xl backdrop-blur-md border border-gray-700 hover:border-blue-500 transition-all duration-500 hover:shadow-[0_0_30px_#3b82f6] hover:-translate-y-2">
+                    <i class="fas fa-flag fa-3x text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">CTF "ShootTheSun"</h3>
+                    <p class="text-gray-400 mb-4">TryHackMe room on real-world exploitation & hardening.</p>
+                    <a href="https://tryhackme.com/jr/shootthesun" class="text-blue-400 hover:text-blue-300 transition"><i class="fas fa-external-link-alt mr-1"></i>View Room →</a>
                 </div>
+                <div class="project-card bg-gray-900 bg-opacity-40 p-6 rounded-2xl backdrop-blur-md border border-gray-700 hover:border-green-500 transition-all duration-500 hover:shadow-[0_0_30px_#10b981] hover:-translate-y-2">
+                    <i class="fas fa-chart-pie fa-3x text-green-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Centralized Monitoring</h3>
+                    <p class="text-gray-400">Python agent + dashboard for real-time server metrics.</p>
+                </div>
+                <div class="project-card bg-gray-900 bg-opacity-40 p-6 rounded-2xl backdrop-blur-md border border-gray-700 hover:border-orange-500 transition-all duration-500 hover:shadow-[0_0_30px_#f97316] hover:-translate-y-2">
+                    <i class="fas fa-cloud fa-3x text-orange-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Self-Hosted Cloud</h3>
+                    <p class="text-gray-400">Private on-premise storage alternative (like Google Drive).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-16 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 rgb-text"><i class="fas fa-envelope mr-3"></i>Get In Touch</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:kencypher56@gmail.com" class="contact-btn px-6 py-3 rounded-full bg-gray-800 hover:bg-blue-600 transition-all duration-300 hover:shadow-[0_0_20px_#3b82f6]">
+                    <i class="fas fa-envelope mr-2"></i>Email
+                </a>
+                <a href="https://linkedin.com/in/waleed-amjad-069520217" class="contact-btn px-6 py-3 rounded-full bg-gray-800 hover:bg-blue-600 transition-all duration-300 hover:shadow-[0_0_20px_#3b82f6]">
+                    <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                </a>
+                <a href="tel:+923090326526" class="contact-btn px-6 py-3 rounded-full bg-gray-800 hover:bg-blue-600 transition-all duration-300 hover:shadow-[0_0_20px_#3b82f6]">
+                    <i class="fas fa-phone mr-2"></i>Phone
+                </a>
             </div>
         </section>
     </main>
 
-    <!-- Chatbot UI -->
-    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
-        <button id="chatbot-toggle" class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition duration-300 focus:outline-none">
-            💬
-        </button>
-        <div id="chatbot-panel" class="hidden absolute bottom-16 right-0 w-80 bg-gray-800 rounded-lg shadow-2xl border border-gray-700">
-            <div class="p-4 border-b border-gray-700">
-                <h3 class="font-semibold">Ask about Waleed</h3>
-            </div>
-            <div id="chatbot-messages" class="h-64 overflow-y-auto p-4 text-sm">
-                <!-- Initial message will be inserted by JS -->
-            </div>
-            <div class="p-4 border-t border-gray-700">
-                <input type="text" id="chatbot-input" placeholder="Type your question..." class="w-full bg-gray-700 text-white rounded-full px-4 py-2 focus:outline-none">
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
     <script src="script.js"></script>
-    <script src="chatbot.js"></script>
 </body>
 </html>
